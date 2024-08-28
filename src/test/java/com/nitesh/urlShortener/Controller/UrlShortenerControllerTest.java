@@ -1,8 +1,8 @@
-package com.nitesh.urlShortner.Controller;
+package com.nitesh.urlShortener.Controller;
 
-import com.nitesh.urlShortner.controller.UrlShortenerController;
-import com.nitesh.urlShortner.model.ShortenRequest;
-import com.nitesh.urlShortner.service.UrlShortenerService;
+import com.nitesh.urlShortener.controller.UrlShortenerController;
+import com.nitesh.urlShortener.model.ShortenRequest;
+import com.nitesh.urlShortener.service.UrlShortenerService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

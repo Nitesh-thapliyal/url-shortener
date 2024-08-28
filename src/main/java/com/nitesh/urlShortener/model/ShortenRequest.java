@@ -1,4 +1,4 @@
-package com.nitesh.urlShortner.model;
+package com.nitesh.urlShortener.model;
 
 import lombok.Data;
 

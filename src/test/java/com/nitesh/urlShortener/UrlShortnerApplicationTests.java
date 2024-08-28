@@ -1,4 +1,4 @@
-package com.nitesh.urlShortner;
+package com.nitesh.urlShortener;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

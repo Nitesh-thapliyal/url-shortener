@@ -1,7 +1,7 @@
-package com.nitesh.urlShortner.controller;
+package com.nitesh.urlShortener.controller;
 
-import com.nitesh.urlShortner.model.ShortenRequest;
-import com.nitesh.urlShortner.service.UrlShortenerService;
+import com.nitesh.urlShortener.model.ShortenRequest;
+import com.nitesh.urlShortener.service.UrlShortenerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

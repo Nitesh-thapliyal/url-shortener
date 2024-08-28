@@ -1,4 +1,4 @@
-package com.nitesh.urlShortner.service;
+package com.nitesh.urlShortener.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -19,6 +19,10 @@ public class UrlShortenerService {
     private static final int CODE_LENGTH = 6;
 
     public String shortenUrl(String longUrl){
+
+        if (longUrl == null || longUrl.trim().isEmpty()) {
+            throw new IllegalArgumentException("URL is required");
+        }
 
         //check if the code exist in redis or not
         String existingCode = redisTemplate.opsForValue().get("url:" + longUrl);
