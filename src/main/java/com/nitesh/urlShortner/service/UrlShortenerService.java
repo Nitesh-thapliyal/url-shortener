@@ -58,4 +58,18 @@ public class UrlShortenerService {
         return redisTemplate.opsForValue().get("code:" + shortCode);
     }
 
+    public Map<String, Integer> getTopDomains() {
+        Set<String> topDomains = redisTemplate.opsForZSet().reverseRange("domain_counts", 0, 2);
+        if (topDomains == null) {
+            return Collections.emptyMap();
+        }
+        return topDomains.stream()
+                .collect(Collectors.toMap(
+                        domain -> domain,
+                        domain -> Objects.requireNonNull(redisTemplate.opsForZSet().score("domain_counts", domain)).intValue(),
+                        (v1, v2) -> v1,
+                        LinkedHashMap::new
+                ));
+    }
+
 }
