@@ -1,5 +1,6 @@
 package com.nitesh.urlShortner.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import java.util.stream.Collectors;
 @Service
 public class UrlShortenerService {
 
+    @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
     // characters used for creating short code
