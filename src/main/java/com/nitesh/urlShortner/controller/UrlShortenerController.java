@@ -32,4 +32,10 @@ public class UrlShortenerController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @GetMapping("/metrics")
+    public ResponseEntity<Map<String, Integer>> getMetrics() {
+        return ResponseEntity.ok(urlShortenerService.getTopDomains());
+    }
+
 }
