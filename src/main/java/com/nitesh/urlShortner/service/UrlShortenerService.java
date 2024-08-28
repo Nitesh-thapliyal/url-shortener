@@ -53,4 +53,9 @@ public class UrlShortenerService {
             return "";
         }
     }
+
+    public String getLongUrl(String shortCode) {
+        return redisTemplate.opsForValue().get("code:" + shortCode);
+    }
+
 }
